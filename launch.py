@@ -10,4 +10,4 @@ def sepia(img):
   return sepia_img
 
 iface = gr.Interface(sepia, gr.inputs.Image(shape=(200, 200)), "image")
-iface.launch()
+iface.launch(share=True)
