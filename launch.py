@@ -31,6 +31,6 @@ def sepia(img):
 
 
 iface = gr.Interface(process, gr.inputs.Image(shape=(256, 256)), "image",examples=[
-        ["sample_images/drone_1.tif"],
+        ["sample_images/drone_1.png"]
     ])
 iface.launch(share=True)
