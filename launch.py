@@ -6,19 +6,20 @@ from processingpipeline.torch_pipeline import raw2rgb, RawToRGB, ParametrizedPro
 
 def process(raw_img):
   #raw_dataset = get_dataset('DS') #TODO: input from selection (show an example)
-  raw_img = load_image(path)
+  #raw_img = load_image(path)
+  
   #loader = torch.utils.data.DataLoader(raw_dataset, batch_size=1)
   #batch_raw, batch_mask = next(iter(loader))
 
   # torch proc
-  camera_parameters = raw_dataset.camera_parameters
-  black_level = camera_parameters[0]
+  #camera_parameters = raw_dataset.camera_parameters
+  #black_level = camera_parameters[0]
 
-  proc = ParametrizedProcessing(camera_parameters) #TODO: write two other classes and write in 
+  #proc = ParametrizedProcessing(camera_parameters) #TODO: write two other classes and write in 
 
-  batch_rgb = proc(batch_raw)
-  rgb = batch_rgb[0]
-  return rgb_img
+  #batch_rgb = proc(batch_raw)
+  #rgb = batch_rgb[0]
+  return raw_img #rgb_img
 
 def sepia(img):
   sepia_filter = np.array([[.393, .769, .189],
@@ -29,7 +30,7 @@ def sepia(img):
   return sepia_img
 
 
-iface = gr.Interface(process, gr.inputs.Image(shape=(200, 200)), "image",examples=[
-        ["sample_images/drone_1.tif"],
+iface = gr.Interface(process, gr.inputs.Image(shape=(256, 256)), "image",examples=[
+        ["sample_images/drone_1.png"]
     ])
 iface.launch(share=True)
