@@ -1,5 +1,5 @@
 import gradio as gr
-import tensorflow as tf
+#import tensorflow as tf
 import numpy as np
 import json
 from os.path import dirname, realpath, join
@@ -34,7 +34,7 @@ iface = gr.Interface(
     interpretation="default",
     examples=[
         ["images/drone_1.png"],
-        ["images/drone_1.tif"]
+        ["images/drone_1.tiff"]
     ])
 
 if __name__ == "__main__":
