@@ -10,7 +10,7 @@ from utils.base import np2torch, torch2np
 
 import segmentation_models_pytorch as smp
 
-from utils.debug import debug
+#from utils.debug import debug
 
 K_G = torch.Tensor([[0, 1, 0],
                     [1, 4, 1],
