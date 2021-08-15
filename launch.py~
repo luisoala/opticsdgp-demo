@@ -3,7 +3,7 @@ import numpy as np
 from processingpipeline.pipeline import RawProcessingPipeline
 from processingpipeline.torch_pipeline import raw2rgb, RawToRGB, ParametrizedProcessing, NNProcessing
 
-#current_dir = "/home/donald/Documents/research/perturbed-minds-project/opticsdgp-demo"
+current_dir = "/home/donald/Documents/research/perturbed-minds-project/opticsdgp-demo"
 
 def process(raw_img):
   #raw_dataset = get_dataset('DS') #TODO: input from selection (show an example)
@@ -32,7 +32,7 @@ def sepia(img):
 
 
 iface = gr.Interface(process, gr.inputs.Image(shape=(256, 256)), "image",examples=[
-        ["./drone_1.png"]
+        [current_dir+"/sample_images/drone_1.png"]
     ])
 iface.launch(share=True)
 
