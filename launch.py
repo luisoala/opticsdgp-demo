@@ -29,7 +29,7 @@ def sepia(img):
 
 
 iface = gr.Interface(process, gr.inputs.Image(shape=(200, 200)), "image",examples=[
-        ["images/cheetah1.jpg"],
-        ["images/lion.jpg"]
+        ["sample_images/cheetah1.jpg"],
+        ["sample_images/lion.jpg"]
     ])
 iface.launch(share=True)
