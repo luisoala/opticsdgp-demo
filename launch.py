@@ -5,9 +5,10 @@ from processingpipeline.torch_pipeline import raw2rgb, RawToRGB, ParametrizedPro
 
 
 def process(raw_img):
-  raw_dataset = get_dataset('DS') #TODO: input from selection (show an example)
-  loader = torch.utils.data.DataLoader(raw_dataset, batch_size=1)
-  batch_raw, batch_mask = next(iter(loader))
+  #raw_dataset = get_dataset('DS') #TODO: input from selection (show an example)
+  raw_img = load_image(path)
+  #loader = torch.utils.data.DataLoader(raw_dataset, batch_size=1)
+  #batch_raw, batch_mask = next(iter(loader))
 
   # torch proc
   camera_parameters = raw_dataset.camera_parameters
@@ -29,7 +30,6 @@ def sepia(img):
 
 
 iface = gr.Interface(process, gr.inputs.Image(shape=(200, 200)), "image",examples=[
-        ["sample_images/cheetah1.jpg"],
-        ["sample_images/lion.jpg"]
+        ["sample_images/drone_1.tif"],
     ])
 iface.launch(share=True)
