@@ -13,7 +13,6 @@ pytorch_toolbelt
 rawpy
 scikit_learn
 segmentation_models_pytorch
-skimage
 tifffile
 torch==1.9.0
 torchvision==0.10.0
