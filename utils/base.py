@@ -187,8 +187,6 @@ def get_mlflow_model_by_name(experiment_name, run_name,
     
     # 0. mlflow basics
     mlflow.set_tracking_uri(tracking_uri)
-    os.environ["AWS_ACCESS_KEY_ID"] = "AKIAYYIYHFHKBIJHOJPA"
-    os.environ["AWS_SECRET_ACCESS_KEY"] = "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"
 
     # 1. use get_experiment_by_name to get experiment objec
     experiment = mlflow.get_experiment_by_name(experiment_name)
